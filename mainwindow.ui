@@ -7,21 +7,42 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>600</height>
+    <height>592</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>550</width>
+    <height>592</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>550</width>
+    <height>592</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Silenter</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="statusTip">
+   <string>Nazarov A.A., artnazarov@internet.ru</string>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -29,25 +50,38 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>521</width>
-      <height>441</height>
+      <x>10</x>
+      <y>0</y>
+      <width>511</width>
+      <height>511</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <property name="sizeConstraint">
-      <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
+      <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
      </property>
      <item>
       <widget class="QLabel" name="qlAboutListOfBlockedApps">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
         <string>Введи список блокируемых программ</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="qteBlockedAppsProcessNames"/>
+      <widget class="QTextEdit" name="qteBlockedAppsProcessNames">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
