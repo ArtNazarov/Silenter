@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMenu>
+#include <QSystemTrayIcon>
+#include <QAction>
 #include "launcher.h"
 
 QT_BEGIN_NAMESPACE
@@ -15,13 +18,18 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    QMenu *trayMenu = nullptr;
+    QSystemTrayIcon* trayIcon = nullptr;
+    QAction* restoreAction = nullptr;
+    QAction*  quitAction = nullptr;
     launcher* l = nullptr;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     void on_pushButton_clicked();
-
+protected:
+    void closeEvent(QCloseEvent *event) override;
 private:
     Ui::MainWindow *ui;
 };
