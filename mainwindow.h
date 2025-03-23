@@ -25,9 +25,13 @@ public:
     launcher* l = nullptr;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+public slots:
+    void openFile();
 private slots:
     void on_pushButton_clicked();
+
+    void on_qpbOpenFile_clicked();
+
 protected:
     void closeEvent(QCloseEvent *event) override;
 private:

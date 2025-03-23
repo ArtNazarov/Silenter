@@ -5,6 +5,7 @@ The tool to block the distracting apps
 
 - Blocks apps by list of processes
 - Minimize app to tray
+- Load list from text file
 
 # How to use
 

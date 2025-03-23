@@ -84,6 +84,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="qpbOpenFile">
+       <property name="text">
+        <string>Открыть файл...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>block apps</string>
@@ -102,9 +109,38 @@
      <height>39</height>
     </rect>
    </property>
+   <widget class="QMenu" name="qmnuOpenFile">
+    <property name="title">
+     <string>Список</string>
+    </property>
+    <addaction name="qacOpenFile"/>
+   </widget>
+   <addaction name="qmnuOpenFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="qacOpenFile">
+   <property name="text">
+    <string>Открыть файл</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>qacOpenFile</sender>
+   <signal>triggered()</signal>
+   <receiver>qpbOpenFile</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>476</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
